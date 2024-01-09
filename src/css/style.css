@@ -16,6 +16,16 @@ h2{
 p{
     color: azure;
 }
+p#div{
+    color: azure;
+    width: 20%;
+    text-align: left;
+}
+p#reg{
+    color: azure;
+    width: 35%;
+    text-align: left;
+}
 label{
     color: blanchedalmond;
 }
@@ -27,4 +37,21 @@ th{
 }
 td{
     color: azure;
+    text-align: left;
+}
+div#flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    flex: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+div#regflex{
+    display: flex;
+    flex-direction:column;
+    flex: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
 }

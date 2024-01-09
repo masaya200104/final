@@ -13,11 +13,14 @@
 <?php
 $pdo = new PDO($connect,USER,PASS);
 $sql = $pdo->query('select * from Items');
+echo '<table align="center">';
 foreach($sql as $item){
-echo '<p>ID:',$item['id'],'　カテゴリ:',$item['kategory'],'　アイテム名:',$item['name'],'</p>';
+echo '<tr><td align="left"><p>ID:',$item['id'],'</p></td><td align="left"><p>　カテゴリ:',$item['kategory'],'</p></td><td align="left"><p>　アイテム名:',$item['name'],'</p></td></tr>';
 }
 ?>
+</table>
 <br>
+<tr>
 <div class="col-auto my-1">
     <label for="sample">カテゴリごとにみたい場合は選択してください。</label>
 </div>
@@ -28,14 +31,14 @@ echo '<p>ID:',$item['id'],'　カテゴリ:',$item['kategory'],'　アイテム�
         <option value="select3">防具</option>
     </select>
 </div>
-
+</tr>
 <div class="col-auto my-5">
     <div id="Box1" class="my-5">
     <?php
     $pdo1 = new PDO($connect,USER,PASS);
     $sql1 = $pdo1->query('select * from Items where kategory="アイテム"');
     foreach($sql1 as $item1){
-    echo '<p>ID:',$item1['id'],'　カテゴリ:',$item1['kategory'],'　アイテム名:',$item1['name'],'</p>';
+    echo '<div id="flex"><p id="div">ID:',$item1['id'],'</p><p id="div">　カテゴリ:',$item1['kategory'],'</p><p id="div">　アイテム名:',$item1['name'],'</p></div>';
     }
     ?>
     </div>
@@ -44,7 +47,7 @@ echo '<p>ID:',$item['id'],'　カテゴリ:',$item['kategory'],'　アイテム�
     $pdo2 = new PDO($connect,USER,PASS);
     $sql2 = $pdo2->query('select * from Items where kategory="武器"');
     foreach($sql2 as $item2){
-    echo '<p>ID:',$item2['id'],'　カテゴリ:',$item2['kategory'],'　アイテム名:',$item2['name'],'</p>';
+    echo '<div id="flex"><p id="div">ID:',$item2['id'],'</p><p id="div">　カテゴリ:',$item2['kategory'],'</p><p id="div">　アイテム名:',$item2['name'],'</p></div>';
     }
     ?>
     </div>
@@ -53,9 +56,10 @@ echo '<p>ID:',$item['id'],'　カテゴリ:',$item['kategory'],'　アイテム�
     $pdo3 = new PDO($connect,USER,PASS);
     $sql3 = $pdo3->query('select * from Items where kategory="防具"');
     foreach($sql3 as $item3){
-    echo '<p>ID:',$item3['id'],'　カテゴリ:',$item3['kategory'],'　アイテム名:',$item3['name'],'</p>';
+    echo '<div id="flex"><p id="div">ID:',$item3['id'],'</p><p id="div">　カテゴリ:',$item3['kategory'],'</p><p id="div">　アイテム名:',$item3['name'],'</p></div>';
     }
     ?>
+    </table>
     </div>
 </div>
 <a href="final.php">前の画面へ</a>

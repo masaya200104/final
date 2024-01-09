@@ -9,14 +9,16 @@
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <h2>アイテム情報削除システム</h2>
 <?php require 'db-conect.php'; ?>
+<table align="center">
 <?php
 $pdo = new PDO($connect,USER,PASS);
 $sql = $pdo->query('select * from Items');
 echo '<form action="delete_output.php" method="post">';
 foreach($sql as $item){
-echo '<p><input type="checkbox" name="item[]" value="',$item['id'],'">',$item['name'],'</p>';
+echo '<tr><td><p><input type="checkbox" name="item[]" value="',$item['id'],'">',$item['name'],'</p></td></tr>';
 }
-echo '<input type="submit" value="削除">';
+echo '</table>';
+echo '<input type="submit" value="削除"><br>';
 echo '</form>';
 ?>
 <a href="final.php">前の画面へ</a>

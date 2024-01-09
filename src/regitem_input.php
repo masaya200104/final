@@ -8,17 +8,26 @@
 <body>
 <link href="css/style.css" rel="stylesheet" type="text/css">
     <h2>アイテム追加システム</h2>
+    
     <p>商品を追加します</p>
     <form action="regitem_output.php" method="post">
-    <p>カテゴリ<select name="kategory">
+    <div id="flex">
+    <p id="reg">
+    カテゴリ<select name="kategory">
     <option>アイテム</option>
     <option>武器</option>
     <option>防具</option>
     </select>
     </p>
-    <p>商品名<input tyep="text" name="name"></P>
-    <input type="submit" value="追加"><br>
+    <p id="reg">
+    商品名<input tyep="text" name="name">
+    </P>
+    <p>
+    <input type="submit" value="追加">
+    </p>
+    </div>
     </form>
     <a href="final.php">前の画面へ</a>
+    
 </body>
 </html>
