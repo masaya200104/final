@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+    background-image: url(../image/shop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color: blanchedalmond;
+}
+a{
+    color: aquamarine;
+}
+h2{
+    color: blanchedalmond;
+}
+p{
+    color: azure;
+}
+label{
+    color: blanchedalmond;
+}
+table{
+    color: azure;
+}
+th{
+    color: azure;
+}
+td{
+    color: azure;
+}
