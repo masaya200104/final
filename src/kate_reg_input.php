@@ -8,24 +8,13 @@
 <body>
 <?php require 'db-conect.php'; ?>
 <link href="css/style.css" rel="stylesheet" type="text/css">
-    <h2>アイテム追加システム</h2>
+    <h2>カテゴリ追加システム</h2>
     
-    <p>商品を追加します</p>
-    <form action="regitem_output.php" method="post">
+    <p>追加するカテゴリを書いてください</p>
+    <form action="kate_reg_output.php" method="post">
     <div id="flex">
     <p id="reg">
-    カテゴリ<select name="kategory">
-   <?php
-    $pdo = new PDO($connect,USER,PASS);
-    $sql = $pdo->query('select * from Kategory');
-    foreach($sql as $kategory){
-    echo '<option>',$kategory['kategory_name'],'</option>';
-    }
-    ?>
-    </select>
-    </p>
-    <p id="reg">
-    商品名<input tyep="text" name="name">
+    カテゴリ名<input tyep="text" name="kate_name">
     </P>
     <p>
     <input type="submit" value="追加">

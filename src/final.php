@@ -13,6 +13,7 @@
     <a href="regitem_input.php">登録</a>
     <a href="update.php">更新</a>
     <a href="delete.php">削除</a>
+    <a href="kate_reg_input.php">カテゴリ追加</a>
     </h3>
 </body>
 </html>

@@ -19,6 +19,9 @@ echo '<tr><td align="left"><p>ID:',$item['id'],'</p></td><td align="left"><p>　
 }
 ?>
 </table>
+<?php
+/*
+echo '
 <br>
 <tr>
 <div class="col-auto my-1">
@@ -32,9 +35,10 @@ echo '<tr><td align="left"><p>ID:',$item['id'],'</p></td><td align="left"><p>　
     </select>
 </div>
 </tr>
-<div class="col-auto my-5">
-    <div id="Box1" class="my-5">
-    <?php
+';
+echo '<div class="col-auto my-5">';
+echo '<div id="Box1" class="my-5">';
+    
     $pdo1 = new PDO($connect,USER,PASS);
     $sql1 = $pdo1->query('select * from Items where kategory="アイテム"');
     foreach($sql1 as $item1){
@@ -56,11 +60,11 @@ echo '<tr><td align="left"><p>ID:',$item['id'],'</p></td><td align="left"><p>　
     $pdo3 = new PDO($connect,USER,PASS);
     $sql3 = $pdo3->query('select * from Items where kategory="防具"');
     foreach($sql3 as $item3){
-    echo '<div id="flex"><p id="div">ID:',$item3['id'],'</p><p id="div">　カテゴリ:',$item3['kategory'],'</p><p id="div">　アイテム名:',$item3['name'],'</p></div>';
+    echo '<div id="flex"><p id="div">ID:',$item3['id'],'</p><p id="div">　カテゴリ:',$item3['kategory'],'</p><p id="div">　アイテム名:',$item3['name'],'</p></div></div></table>';
     }
+    */
     ?>
-    </table>
-    </div>
+    
 </div>
 <a href="final.php">前の画面へ</a>
 </body>
