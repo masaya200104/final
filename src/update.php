@@ -19,9 +19,9 @@ $sql = $pdo->query('select * from Items');
 foreach($sql as $item){
     echo '<form action="update_output.php" method="post"><tr><td>',$item['id'],'<input type="hidden" name="id" value="',$item['id'],'"></td>
     <td><select name="kategory">';
-     $pdo = new PDO($connect,USER,PASS);
-     $sql = $pdo->query('select * from Kategory');
-     foreach($sql as $kategory){
+     $o = new PDO($connect,USER,PASS);
+     $l = $o->query('select * from Kategory');
+     foreach($l as $kategory){
      echo '<option>',$kategory['kategory_name'],'</option>';
      }
      echo '</select></td><td><input type="text" name="name" value="',$item['name'],'"></td>

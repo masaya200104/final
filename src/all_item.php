@@ -12,10 +12,10 @@
 <h2>アイテム一覧表示システム</h2>
 <?php
 $pdo = new PDO($connect,USER,PASS);
-$sql = $pdo->query('select * from Items');
+$sql = $pdo->query('select id,kategory_name,name from Items INNER JOIN Kategory on Items.kategory_id = Kategory.kategory_id');
 echo '<table align="center">';
 foreach($sql as $item){
-echo '<tr><td align="left"><p>ID:',$item['id'],'</p></td><td align="left"><p>　カテゴリ:',$item['kategory'],'</p></td><td align="left"><p>　アイテム名:',$item['name'],'</p></td></tr>';
+echo '<tr><td align="left"><p>ID:',$item['id'],'</p></td><td align="left"><p>　カテゴリ:',$item['kategory_name'],'</p></td><td align="left"><p>　アイテム名:',$item['name'],'</p></td></tr>';
 }
 ?>
 </table>

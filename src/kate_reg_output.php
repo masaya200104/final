@@ -10,7 +10,7 @@
 <?php require 'db-conect.php'; ?>
 <?php
 $pdo = new PDO($connect,USER,PASS);
-$sql = $pdo->prepare('insert into Kategory values(?)');
+$sql = $pdo->prepare('insert into Kategory values(null,?)');
 if($sql -> execute([$_POST['kate_name']]) ){
     echo '<p>追加に成功しました。</p><br>';
 }else{
