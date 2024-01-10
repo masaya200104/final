@@ -17,7 +17,15 @@
 $pdo = new PDO($connect,USER,PASS);
 $sql = $pdo->query('select * from Items');
 foreach($sql as $item){
-    echo '<form action="update_output.php" method="post"><tr><td>',$item['id'],'<input type="hidden" name="id" value="',$item['id'],'"></td><td><input type="text" name="kategory" value="',$item['kategory'],'"></td><td><input type="text" name="name" value="',$item['name'],'"></td><td><input type="submit" value="更新"></form></td></tr>';
+    echo '<form action="update_output.php" method="post"><tr><td>',$item['id'],'<input type="hidden" name="id" value="',$item['id'],'"></td>
+    <td><select name="kategory">';
+     $pdo = new PDO($connect,USER,PASS);
+     $sql = $pdo->query('select * from Kategory');
+     foreach($sql as $kategory){
+     echo '<option>',$kategory['kategory_name'],'</option>';
+     }
+     echo '</select></td><td><input type="text" name="name" value="',$item['name'],'"></td>
+     <td><input type="submit" value="更新"></form></td></tr>';
 }
 ?>
     </table>
