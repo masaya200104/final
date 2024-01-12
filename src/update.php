@@ -15,12 +15,13 @@
     
 <?php
 $pdo = new PDO($connect,USER,PASS);
-$sql = $pdo->query('select * from Items');
+$sql = $pdo->query('select id,kategory_name,name from Items INNER JOIN Kategory on Items.kategory_id = Kategory.kategory_id');
 foreach($sql as $item){
     echo '<form action="update_output.php" method="post"><tr><td>',$item['id'],'<input type="hidden" name="id" value="',$item['id'],'"></td>
     <td><select name="kategory">';
      $o = new PDO($connect,USER,PASS);
      $l = $o->query('select * from Kategory');
+     echo '<option>',$item['kategory_name'],'</option>';
      foreach($l as $kategory){
      echo '<option>',$kategory['kategory_name'],'</option>';
      }
