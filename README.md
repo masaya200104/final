@@ -3,4 +3,4 @@
 # クラス　　：SD2C
 # 氏名　　　：嶋立　将也
 # システム名：冒険者用アイテム管理システム
-# URL　　　 ：
+# URL　　　 ：http://aso2201221.hiho.jp/final/final.php
